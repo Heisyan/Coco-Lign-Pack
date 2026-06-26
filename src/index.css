@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Nunito:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-husk-beige: #F4EFE6;
+  --color-shell-brown: #3A2618;
+  --color-eco-green: #5A7D59;
+  --color-orange-peel: #D98A44;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Nunito', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, Cambria, serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-husk-beige);
+    color: var(--color-shell-brown);
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Custom styles for organic vibe */
+.organic-pattern {
+  background-color: #F4EFE6;
+  background-image: radial-gradient(#3a26180a 1px, transparent 1px), radial-gradient(#3a26180a 1px, #F4EFE6 1px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Scroll shadow indicators */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
